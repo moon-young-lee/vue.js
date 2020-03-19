@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data binding</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" id="user_id" onchange="userIdChanged(this)">
+        <input type="password" id="user_password" onchange="userPwChanged(this)">
+        <button type="button" onclick="login()">로그인</button>
+        <br>
+        아이디: <span id="user_id_text"></span>
+        <br>
+        비번 : <span id="user_pw_text"></span>
+    </div>
+<script>
+    function login(){
+        let userId = document.getElementById('user_id').value;
+        let userPassword = document.getElementById('user_password').value;
+        console.log(userId);
+        console.log(userPassword);
+    }
+    function userIdChanged(obj){
+        document.getElementById('user_id_text').innerText = obj.value;
+    }
+    function userPwChanged(obj){
+        document.getElementById('user_pw_text').innerText = obj.value;
+    }
+</script>
+</body>
+</html>
