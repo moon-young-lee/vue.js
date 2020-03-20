@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        img{ width:500px;}    
+    </style>
+</head>
+<body>
+
+<div id="app">
+   
+   
+   
+<!--    ★1. 이미지 vue로 src 받고 id      -->
+<!--<img id="'thumbnail_${id}'" :src="image" alt="">-->
+    
+    
+    
+    
+<!--★2. 테스트용 -->
+<!--<div :style="[style, fontStyle]">테스트용</div>-->
+
+
+<!--★3. 테스트용2  : 클래스 넣는것도 가능하다-->
+<div :class="[dropdown, toggle]">테스트용</div>
+</div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    
+let app = new Vue({
+    el: '#app',
+    data(){
+        return {
+            id:1,
+            image :'1.jpg',
+//            style: 'background:red',
+            fontStyle:{
+                fontSize: '50px'
+            },
+            dropdown: {
+//                dropdown: true
+                dropdown: false
+            },
+            toggle: {
+                on: false
+            }
+        };
+    }
+});    
+    
+    
+</script>
+</body>
+</html>
