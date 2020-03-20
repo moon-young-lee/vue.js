@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        ul { list-style:none;}
+        img{ width: 100px; }
+        li { padding-bottom: 30px; font-size: 12px;  }
+        
+    </style>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="item in items">
+<!--                변수 in 반복문에 사용할 배열 -->
+               <img :src="item.image" alt="">
+               <br>
+               {{ item.title }}
+            </li>
+        </ul>
+        
+        
+        
+    </div>
+
+   
+   
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>   
+<script>
+    new Vue({
+        el:'#app',
+        data(){
+            return {
+                items:[
+                    {
+                        id:1,
+                        image: '1.jpg',
+                        title: '아이유'
+                    },
+                    {
+                        id:2,
+                        image: '2.jpg',
+                        title: '태연'
+                    },
+                    {
+                        id:3,
+                        image: '3.jpg',
+                        title: '태연'
+                    },
+                    {
+                        id:4,
+                        image: '4.jpg',
+                        title: '태연'
+                    },
+                    {
+                        id:5,
+                        image: '5.jpg',
+                        title: '태연'
+                    }
+                ]
+            }
+        }
+        
+        
+        
+        
+        
+    })
+    
+    
+</script>
+
+</body>
+</html>
