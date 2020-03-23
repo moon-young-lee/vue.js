@@ -20,8 +20,8 @@
 </head>
 <body>
 <div id="app">
-    <button>버튼</button>
-    <div class="dropdown">
+    <button @click="btnClick">버튼</button>
+    <div :class="[dropdown, toggle]">
         <ul>
             <li><a href="#">메뉴1</a></li>
             <li><a href="#">메뉴2</a></li>
@@ -30,15 +30,30 @@
         </ul>
     </div>
 </div><!--app end-->
-<script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>
-$('button').click(function(){
-    console.log('클릭');
-    $('.dropdown').toggleClass('on');
-}); 
+    let app = new Vue({
+        el: '#app',
+        data(){
+            return {
+                dropdown:{
+                    dropdown: true
+                },
+                toggle:{
+                    on: false
+                }
+            };
+        },
+        methods:{
+            btnClick(){
+                this.toggle.on= ! this.toggle.on;
+            }
+        }
+        
+        
+        
+    });
+    
 </script>
 </body>
 </html>
