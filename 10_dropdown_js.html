@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        img{ width:500px;}    
+        .dropdown ul{
+            display: none;
+            list-style: none;
+            margin: 0;
+            border:1px solid black;
+            padding: 10px;
+            width: 200px;
+        }
+        .dropdown.on ul{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <button>버튼</button>
+    <div class="dropdown">
+        <ul>
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴2</a></li>
+            <li><a href="#">메뉴3</a></li>
+            <li><a href="#">메뉴4</a></li>
+        </ul>
+    </div>
+</div><!--app end-->
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script>
+$('button').click(function(){
+    console.log('클릭');
+    $('.dropdown').toggleClass('on');
+}); 
+</script>
+</body>
+</html>
