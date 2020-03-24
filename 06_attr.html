@@ -14,19 +14,13 @@
    
    
 <!--    ★1. 이미지 vue로 src 받고 id      -->
-<!--<img id="'thumbnail_${id}'" :src="image" alt="">-->
+<img id="'thumbnail_${id}'" :src="image" alt="">
     
     
     
     
 <!--★2. 테스트용 -->
-<!--<div :style="[style, fontStyle]">테스트용</div>-->
-
-
-<!--★3. 테스트용2  : 클래스 넣는것도 가능하다-->
-<div :class="[dropdown, toggle]">테스트용</div>
-</div>
-
+<div :style="[style, fontStyle]">테스트용</div>
 
 
 
@@ -42,13 +36,6 @@ let app = new Vue({
 //            style: 'background:red',
             fontStyle:{
                 fontSize: '50px'
-            },
-            dropdown: {
-//                dropdown: true
-                dropdown: false
-            },
-            toggle: {
-                on: false
             }
         };
     }
