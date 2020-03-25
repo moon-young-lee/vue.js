@@ -10,28 +10,25 @@
 </style>
 </head>
 <body>
-<div class="groupBox">
-    <div class="box">
-        <img src="imgs/1.jpg" alt="">
-        <p>아이유</p>
-    </div>
-    <div class="box">
-        <img src="imgs/2.jpg" alt="">
-        <p>태연1</p>
-    </div>
-    <div class="box">
-        <img src="imgs/3.jpg" alt="">
-        <p>태연2</p>
-    </div>
-    <div class="box">
-        <img src="imgs/4.jpg" alt="">
-        <p>태연3</p>
-    </div>
-    <div class="box">
-        <img src="imgs/5.jpg" alt="">
-        <p>태연4</p>
-    </div>
-</div>
+<product 
+    image="https://content.surfit.io/thumbs/image/KPZl5/wn0eJ/7079575845e79a21795991.gif/cover-center-1x.webp"
+    title="그림1"
+    >
+</product>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    Vue.component('product',{
+        props: ['image', 'title'],
+        template:`
+        <div class="box">
+            <img :src='image' alt="">
+            <p> {{title}} </p>
+        </div>
+        
+        `
+    });
+    
+</script>
 </body>
 </html>
 
